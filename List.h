@@ -19,11 +19,11 @@ public:
 
     MyList()
     {
-        pFirst = NULL;
+        pFirst = nullptr;
     }
     ~MyList()
     {
-        while (pFirst != NULL)
+        while (pFirst != nullptr)
         {
             Node<T>* p_delete = pFirst;
             pFirst = pFirst->next;
@@ -61,7 +61,7 @@ public:
     {
         Node<T>* cur = pFirst;
         Node<T>* prev = pFirst;
-        for (int i = 1; cur != NULL; i++)
+        for (int i = 1; cur != nullptr; i++)
         {
             if (!(i % 2))
             {
