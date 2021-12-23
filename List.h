@@ -42,13 +42,19 @@ public:
 
     void PrintList()
     {
-        Node<T>* cur = pFirst;
-        while (cur != NULL)
+        if (pFirst == nullptr)
+            std::cout << "stack is empty." <<  std::endl;
+        else
         {
-            std::cout << cur->value << std::endl;
-            cur = cur->next;
+            Node<T>* p;
+            p = pFirst;
+            while (p != nullptr)
+            {
+                std::cout << p->value << "\t";
+                p = p->next;
+            }
+            std::cout << std::endl;
         }
-        delete cur;
     }
 
     void Delete2k()
